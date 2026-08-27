@@ -1,0 +1,2 @@
+import RoleGate from '@/components/admin/RoleGate'; import {supabaseServer} from '@/lib/supabase-server'; import ContentEditor from '@/components/admin/ContentEditor'
+export default async function EditContent({params}:{params:Promise<{id:string}>}){const {id}=await params;const sb=await supabaseServer();const {data:page}=await sb.from('content_pages').select('*').eq('id',id).single();return <RoleGate allow={['admin','editor']}><div className="admin-page"><ContentEditor page={page}/></div></RoleGate>}

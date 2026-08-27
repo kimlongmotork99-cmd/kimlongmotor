@@ -1,0 +1,2 @@
+'use client'; import {supabaseBrowser} from '@/lib/supabase'; import {useRouter} from 'next/navigation'
+export default function DeleteButton({table,id}:{table:'products'|'news',id:string}){const router=useRouter();const del=async()=>{if(!confirm('Xóa mục này?'))return;const {error}=await supabaseBrowser().from(table).delete().eq('id',id);if(error)alert(error.message);else router.refresh()};return <button onClick={del} style={{border:0,background:'transparent',color:'#b42318',cursor:'pointer'}}>Xóa</button>}

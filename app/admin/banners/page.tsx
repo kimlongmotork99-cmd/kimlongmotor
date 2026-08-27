@@ -1,0 +1,2 @@
+import RoleGate from '@/components/admin/RoleGate'; import BannerManager from '@/components/admin/BannerManager'
+export default function Banners(){return <RoleGate allow={['admin','editor']}><div className="admin-page"><div className="page-head"><div><span className="eyebrow">HOMEPAGE</span><h1>Banner trang chủ</h1><p>Sắp xếp slide bằng kéo-thả, thay ảnh và xuất bản từng banner.</p></div></div><BannerManager/></div></RoleGate>}

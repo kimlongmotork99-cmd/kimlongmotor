@@ -1,0 +1,4 @@
+'use client'
+import {useState} from 'react'
+import Dropzone from './Dropzone'
+export default function ImageGallery({value,onChange}:{value:string[];onChange:(v:string[])=>void}){const [drag,setDrag]=useState<number|null>(null);const add=(url:string)=>onChange([...value,url]);const move=(from:number,to:number)=>{const a=[...value];const [x]=a.splice(from,1);a.splice(to,0,x);onChange(a)};return <div><Dropzone onUploaded={url=>add(url)} label="Kéo ảnh vào đây để thêm vào gallery"/><div className="gallery-grid">{value.map((url,i)=><div className={'gallery-item '+(drag===i?'dragging':'')} key={url} draggable onDragStart={()=>setDrag(i)} onDragOver={e=>e.preventDefault()} onDrop={()=>{if(drag!==null)move(drag,i);setDrag(null)}}><img src={url} alt=""/><span>{i+1}</span><button type="button" onClick={()=>onChange(value.filter((_,n)=>n!==i))}>×</button></div>)}</div></div>}

@@ -1,0 +1,2 @@
+import RoleGate from '@/components/admin/RoleGate'; import LeadPipeline from '@/components/admin/LeadPipeline'
+export default function Inquiries(){return <RoleGate allow={['admin','sales']}><div className="admin-page"><div className="page-head"><div><span className="eyebrow">CRM / SALES</span><h1>Pipeline khách hàng</h1><p>Quản lý lead từ website theo từng giai đoạn và giá trị cơ hội.</p></div></div><LeadPipeline/></div></RoleGate>}

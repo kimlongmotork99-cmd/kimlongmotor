@@ -1,0 +1,2 @@
+import RoleGate from '@/components/admin/RoleGate'; import NewsEditor from '@/components/NewsEditor'
+export default async function EditNews({params}:{params:Promise<{id:string}>}){const {id}=await params;return <RoleGate allow={['admin','editor']}><div className="admin-page"><div className="page-head"><div><span className="eyebrow">CONTENT</span><h1>Chỉnh sửa tin tức</h1><p>Cập nhật bài viết và ảnh cover.</p></div></div><NewsEditor id={id}/></div></RoleGate>}
