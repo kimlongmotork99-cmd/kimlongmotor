@@ -6,8 +6,11 @@ import { supabaseServer } from '@/lib/supabase-server'
 import { siteConfig, toMetaDescription } from '@/lib/site'
 
 export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
+  // Cố định chiều rộng viewport = 1280px (thay vì 'device-width').
+  // Nhờ vậy trên điện thoại, trình duyệt sẽ render đúng layout desktop
+  // (các @media(max-width:...) trong globals.css sẽ KHÔNG kích hoạt),
+  // sau đó tự thu nhỏ để vừa màn hình. Người dùng vẫn có thể zoom tay.
+  width: 1280,
   themeColor: '#0b1114',
 }
 

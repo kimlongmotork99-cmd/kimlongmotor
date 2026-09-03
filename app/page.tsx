@@ -5,6 +5,7 @@ import NewsCard from '@/components/NewsCard'
 import HeroCarousel, { type HeroSlide } from '@/components/HeroCarousel'
 import VideoButton from '@/components/VideoButton'
 import SolutionForm from '@/components/SolutionForm'
+import ShowroomFinder from '@/components/ShowroomFinder'
 import { IconFleet, IconBusOutline, IconTourism, IconCorporate, IconWrench, IconCalendar, IconShield, IconPart, IconPhone } from '@/components/icons'
 import { supabaseServer } from '@/lib/supabase-server'
 
@@ -170,37 +171,14 @@ export default async function Home() {
 
           <div className="solution-layout">
             <div className="fleet-showcase">
-              <Image src="/assets/fleet.jpg" alt="Đội xe KIM LONG MOTOR" fill sizes="(max-width: 900px) 100vw, 60vw" style={{ objectFit: 'cover' }} loading="lazy" />
+              <Image src="/assets/fleet-solution.webp" alt="Đội xe KIM LONG MOTOR" fill sizes="(max-width: 900px) 100vw, 60vw" style={{ objectFit: 'cover' }} loading="lazy" />
             </div>
             <SolutionForm />
           </div>
         </div>
       </section>
 
-      <section className="section" id="technology">
-        <div className="container">
-          <div className="section-head">
-            <div>
-              <span className="eyebrow">CÔNG NGHỆ</span>
-              <h2>Công nghệ tạo nên khác biệt</h2>
-            </div>
-            <Link href="/technology">Khám phá →</Link>
-          </div>
-          <div className="detail">
-            <Image src="/assets/fleet.jpg" alt="Công nghệ KIM LONG MOTOR" width={640} height={480} loading="lazy" style={{ width: '100%', height: 'auto', borderRadius: 12 }} />
-            <div>
-              <h3>Tự động hóa · An toàn · Hiệu quả</h3>
-              <p className="muted">
-                Từ thiết kế, hàn robot, xử lý bề mặt, sơn ED đến lắp ráp và kiểm định, mỗi công đoạn
-                được chuẩn hóa để nâng cao độ ổn định và chất lượng sản phẩm.
-              </p>
-              <Link className="btn dark" href="/technology">
-                XEM CÔNG NGHỆ →
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ShowroomFinder />
 
       <section className="section" id="news">
         <div className="container">
