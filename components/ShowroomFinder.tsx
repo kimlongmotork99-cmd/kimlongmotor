@@ -80,17 +80,6 @@ export default function ShowroomFinder() {
   return (
     <section className="showroom-section">
       <div className="showroom-grid">
-        <div className="showroom-map-col">
-          <Image
-            src="/assets/vietnam-map.jpg"
-            alt="Bản đồ hệ thống showroom KIM LONG MOTOR trên toàn quốc"
-            fill
-            sizes="(max-width: 900px) 100vw, 25vw"
-            style={{ objectFit: 'contain', objectPosition: 'center' }}
-            loading="lazy"
-          />
-        </div>
-
         <div className="showroom-panel">
           <h2>TÌM SHOWROOM GẦN BẠN</h2>
 
@@ -143,15 +132,27 @@ export default function ShowroomFinder() {
           </a>
         </div>
 
-        <div className="showroom-photo-col">
-          <Image
-            src="/assets/showroom-building.jpg"
-            alt="Showroom KIM LONG MOTOR"
-            fill
-            sizes="(max-width: 900px) 100vw, 35vw"
-            style={{ objectFit: 'contain' }}
-            loading="lazy"
-          />
+        <div className="showroom-visual">
+          <div className="showroom-map">
+            <Image
+              src="/assets/vietnam-map.jpg"
+              alt="Bản đồ hệ thống showroom KIM LONG MOTOR trên toàn quốc"
+              fill
+              sizes="(max-width: 900px) 100vw, 30vw"
+              style={{ objectFit: 'contain', objectPosition: 'left center' }}
+              loading="lazy"
+            />
+          </div>
+          <div className="showroom-photo">
+            <Image
+              src="/assets/showroom-building.jpg"
+              alt="Showroom KIM LONG MOTOR"
+              fill
+              sizes="(max-width: 900px) 100vw, 50vw"
+              style={{ objectFit: 'cover' }}
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </section>
