@@ -58,9 +58,10 @@ body:has(.admin-shell)> .topbar,body:has(.admin-shell)> .nav,body:has(.admin-she
 .solution-form-card .field::placeholder{color:#7c878d}
 .solution-form-card select.field{color:#fff}
 .showroom-section{background:#fff}
-.showroom-grid{display:grid;grid-template-columns:1fr 1fr;min-height:420px}
-.showroom-panel{padding:64px 60px;display:flex;flex-direction:column;justify-content:center;gap:20px}
-.showroom-panel h2{margin:0;font-size:30px;font-weight:900;color:#0b1636;letter-spacing:.3px}
+.showroom-grid{display:grid;grid-template-columns:.85fr 1.3fr 1.05fr;min-height:420px}
+.showroom-map-col{position:relative;overflow:hidden;background:linear-gradient(160deg,#dcecf7,#eef6fb)}
+.showroom-panel{padding:48px 40px;display:flex;flex-direction:column;justify-content:center;gap:20px}
+.showroom-panel h2{margin:0;font-size:26px;font-weight:900;color:#0b1636;letter-spacing:.3px}
 .showroom-form-row{display:grid;grid-template-columns:1fr 1fr auto;gap:12px}
 .showroom-select{background:#fff;color:#0b1636;cursor:pointer}
 .showroom-select:disabled{color:#a7aeb4;cursor:not-allowed}
@@ -68,10 +69,8 @@ body:has(.admin-shell)> .topbar,body:has(.admin-shell)> .nav,body:has(.admin-she
 .showroom-search-btn:hover{background:#c81a28}
 .showroom-meta{display:flex;align-items:center;gap:10px;color:#5b6670;font-size:13px}
 .showroom-meta svg{flex:none;color:#0b1636}
-.showroom-visual{position:relative;overflow:hidden;min-height:420px;background:#eef6fb}
-.showroom-map{position:absolute;inset:0;background:linear-gradient(160deg,#dcecf7,#eef6fb);clip-path:polygon(0 0,64% 0,40% 100%,0 100%)}
-.showroom-photo{position:absolute;inset:0;clip-path:polygon(64% 0,100% 0,100% 100%,40% 100%)}
-@media(max-width:900px){.showroom-grid{grid-template-columns:1fr}.showroom-panel{padding:40px 24px}.showroom-form-row{grid-template-columns:1fr}.showroom-visual{min-height:280px}.showroom-map{clip-path:none;opacity:.25}.showroom-photo{clip-path:none}}
+.showroom-photo-col{position:relative;overflow:hidden;min-height:420px;background:#eef2f5}
+@media(max-width:900px){.showroom-grid{grid-template-columns:1fr}.showroom-map-col{min-height:220px}.showroom-panel{padding:40px 24px}.showroom-form-row{grid-template-columns:1fr}.showroom-photo-col{min-height:220px}}
 .form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 
 .aftersales{background:#080e11;color:#fff;padding:26px 0}
